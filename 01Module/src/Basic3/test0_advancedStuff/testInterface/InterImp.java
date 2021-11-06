@@ -33,4 +33,8 @@ public class InterImp implements Inter1, Inter2 {
     public void print2() {
 
     }
+
+    public void print3() {
+
+    }
 }

@@ -3,6 +3,7 @@ package Basic3.test0_advancedStuff.testInterface;
 public interface Inter2 {
     public abstract void print1();
     public abstract void print2();
+    void print3();
 
 
     public default void defaultMethod1() {
