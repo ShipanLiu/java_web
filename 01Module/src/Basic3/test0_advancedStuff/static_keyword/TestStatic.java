@@ -37,7 +37,7 @@ public class TestStatic {
     *
     * */
 
-    public static void myMethod(){
+    private static void myMethod(){
         System.out.println("jier");
     }
 

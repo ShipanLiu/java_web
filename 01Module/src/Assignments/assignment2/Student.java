@@ -14,7 +14,7 @@ stu.getFirstname
 */
 
 // Attention!!! write down your own package path
-package Assignments.assignment1;
+package Assignments.assignment2;
 
 import java.util.Date;
 

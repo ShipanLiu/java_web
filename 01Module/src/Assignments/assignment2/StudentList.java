@@ -5,7 +5,7 @@ Aiyana Erbe   108020267357
 Shipan Liu    108019201553
 */
 // Attention!!! write down your own package path
-package Assignments.assignment1;
+package Assignments.assignment2;
 
 
 import java.util.ArrayList;

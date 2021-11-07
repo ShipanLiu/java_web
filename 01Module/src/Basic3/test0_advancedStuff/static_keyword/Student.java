@@ -19,7 +19,7 @@ public class Student {
     * name, age 不是静态的， 还没来得及产生呢， 自然不允许被调用。
     *
     * */
-    public static void show2() {
+    private static void show2() {
 //        System.out.println(name, age, school);
         // 错误， this 指的是这个对象， 而static 没有对象。
 //        this.age;

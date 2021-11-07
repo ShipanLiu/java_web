@@ -1,4 +1,4 @@
-import Assignments.assignment1.Student;
+import Assignments.assignment2.Student;
 
 public class test {
     public static void main(String[] args) {
