@@ -1,7 +1,7 @@
 /*
-* 类型通配符
+* 类型    通配符
 *
-* Integer 的继承关系
+* Integer 的继承关系 如下：
 *
 * Object > Numver > Integer
 *
