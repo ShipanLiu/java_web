@@ -1,11 +1,7 @@
 package Assignments.Assignment4.domin;
 
-public class Kitchen extends Room{
+public class Kitchen extends Room {
     private boolean stove;
-
-    public Kitchen(boolean stove) {
-        this.stove = stove;
-    }
 
     public Kitchen(String name, boolean lighting, boolean stove) {
         super(name, lighting);
@@ -18,5 +14,9 @@ public class Kitchen extends Room{
 
     public void setStove(boolean stove) {
         this.stove = stove;
+    }
+
+    public void switchStove() {
+        stove = stove ? false : true;
     }
 }

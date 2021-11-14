@@ -20,10 +20,9 @@ public class Room {
         return lighting;
     }
 
-    public void switchLight(boolean status) {
-        this.lighting = status;
+    public void switchLight() {
+        lighting = lighting ? false : true;
     }
-
     public void enter() {
         System.out.println("room" + name + "entered");
     }
