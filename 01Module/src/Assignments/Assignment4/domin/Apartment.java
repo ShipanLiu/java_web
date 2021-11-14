@@ -9,11 +9,11 @@ public class Apartment {
     * */
     // 成员属性。
     private ArrayList<Room> roomArr = new ArrayList<>();
-    private Hallway hallway = new Hallway("hallway", false);
+    private Room hallway = new Room("hallway", false);
     private Kitchen kitchen = new Kitchen("kitchen", false, false);
     private Bathroom bathroom = new Bathroom("bathroom", false, false);
-    private Workroom workroom= new Workroom("workroom", false);
-    private Bedroom bedroom = new Bedroom("bedroom", false);
+    private Room workroom= new Room("workroom", false);
+    private Room bedroom = new Room("bedroom", false);
 
     public Apartment() {
         roomArr.add(hallway);
@@ -27,7 +27,7 @@ public class Apartment {
         return roomArr;
     }
 
-    public Hallway getHallway() {
+    public Room getHallway() {
         return hallway;
     }
 

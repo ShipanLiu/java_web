@@ -1,36 +1,36 @@
-package Assignments.Assignment4;
+package Assignments.Assignment4.roomService;
 
 import Assignments.Assignment4.domin.Apartment;
 import Assignments.Assignment4.domin.Bathroom;
 import Assignments.Assignment4.domin.Kitchen;
 import Assignments.Assignment4.domin.Room;
+import Assignments.Assignment4.roomService.RoomService;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class RoomService {
-    private ArrayList<Room> enteredRooms = new ArrayList<>();
-    private Room currentRoom = new Room("unknown", false);
-    private Apartment apartment = new Apartment();
+public class RoomServiceImp implements RoomService {
 
-    public RoomService() {
+        private ArrayList<Room> enteredRooms = new ArrayList<>();
+        private Room currentRoom = new Room("unknown", false);
+        private Apartment apartment = new Apartment();
+
+    public RoomServiceImp() {
         // if created, then initialize entering the Hallway already at the beginning.
         enteredRooms.add(apartment.getRoomArr().get(0));
         currentRoom = apartment.getRoomArr().get(0);
     }
 
-    public ArrayList<Room> getEnteredRooms() {
+        public ArrayList<Room> getEnteredRooms() {
         return enteredRooms;
     }
 
-    public Room getCurrentRoom() {
+        public Room getCurrentRoom() {
         return currentRoom;
     }
 
-    public void setCurrentRoom(Room currentRoom) {
+        public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }
-
 
     /*
      *
@@ -67,6 +67,7 @@ public class RoomService {
             return problemMessageArr;
         }
     }
+
     // switch stove or switch shower
     public void switchStoveOrShower() {
         if (currentRoom.getName().equals("kitchen")) {
@@ -83,8 +84,9 @@ public class RoomService {
             System.out.println("shower in " + bathroomName + " is " + (stoveStatus ? "ON\n\n" : "OFF\n\n"));
         }
     }
+
     // leave apartent and check if all are turned off
-    public Room leaveApartment(Scanner sc) {
+    public Room leaveApartment() {
         // leave the room
         // refresh the currentRoom.
         // if currentRoom is null now, then leave the
@@ -92,8 +94,8 @@ public class RoomService {
         if (currentRoom == null) {
             //check the current before leaving
             ArrayList<String> problemArr = checkAllEles();
-            if(problemArr != null) {
-                for(String str : problemArr) {
+            if (problemArr != null) {
+                for (String str : problemArr) {
                     System.out.println(str);
                 }
             }

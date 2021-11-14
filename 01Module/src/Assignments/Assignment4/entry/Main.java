@@ -4,21 +4,18 @@
  * */
 
 
-package Assignments.Assignment4;
+package Assignments.Assignment4.entry;
 
-import Assignments.Assignment4.domin.Bathroom;
-import Assignments.Assignment4.domin.Kitchen;
+import Assignments.Assignment4.roomService.RoomServiceImp;
 import Assignments.Assignment4.domin.Room;
-import Basic3.test0_advancedStuff.manager.controller.StudentController;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        RoomService roomService = new RoomService();
+        RoomServiceImp roomService = new RoomServiceImp();
         Room currentRoom = roomService.getCurrentRoom();
         String currentRoomName = currentRoom.getName();
         ArrayList<Room> enteredRooms = roomService.getEnteredRooms();
@@ -36,7 +33,7 @@ public class Main {
                         break;
                     case 2:
                         // leave room refresh
-                        currentRoom = roomService.leaveApartment(sc);
+                        currentRoom = roomService.leaveApartment();
                         currentRoomName = currentRoom.getName();
                         break;
                     case 3:
