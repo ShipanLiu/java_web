@@ -1,7 +1,10 @@
 /*
- * 用 ArrayList 来存放这些房间。
- *
- * */
+*
+Timur Plavnik 108020258018
+Aiyana Erbe   108020267357
+Shipan Liu    108019201553
+*
+* */
 
 
 package Assignments.Assignment4.entry;
