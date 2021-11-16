@@ -23,7 +23,6 @@ public class test6_Collections {
 
         Collections.shuffle(list);
 
-
         System.out.println(list);
 
     }
