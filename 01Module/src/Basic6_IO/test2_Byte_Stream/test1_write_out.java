@@ -1,6 +1,5 @@
-package Basic6_IO.test02_Byte_Stream;
+package Basic6_IO.test2_Byte_Stream;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 

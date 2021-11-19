@@ -1,8 +1,7 @@
-package Basic6_IO.test02_Byte_Stream;
+package Basic6_IO.test2_Byte_Stream;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 
 public class test2_tryCatch {
     public static void main(String[] args) {
