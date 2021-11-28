@@ -1,14 +1,15 @@
 /*
-* 接受发送的收据， 并且存放到 本地
+* 接受发送的收据， 并且存放到 本地， 并且给 sender 反馈
+*
 * */
 
-package Basic8_Internet.test3_TCp.test5_exercise5;
+package Basic8_Internet.test3_TCp.test6_exercise6;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Test5_reciever {
+public class Test6_reciever {
     public static void main(String[] args) throws IOException {
         // create the server socket
         ServerSocket ss = new ServerSocket(12345);
@@ -27,6 +28,13 @@ public class Test5_reciever {
             bufferWriter.flush();
         }
 
+        // 再写入文件成功之后， send the feedback;
+        BufferedWriter feedBackWriter = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+        feedBackWriter.write("服务器接受文件成功");
+        feedBackWriter.newLine();
+        feedBackWriter.flush();
+
+        // close all at the ends
         bufferWriter.close();
         ss.close();
     }
