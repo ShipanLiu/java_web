@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Tomcat2" />
+        <module name="Tomcat1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Tomcat" target="1.8" />
+      <module name="Tomcat1" target="1.8" />
       <module name="Tomcat2" target="1.8" />
       <module name="Tomcat_demo" target="1.8" />
     </bytecodeTargetLevel>

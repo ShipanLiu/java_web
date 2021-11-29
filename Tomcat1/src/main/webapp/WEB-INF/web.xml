@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--Servlet 快速配置-->
+     <servlet>
+         <servlet-name>ServletDemo01</servlet-name>
+         <servlet-class>test1_serverlet.test1_servlet_Demo.ServletDemo01</servlet-class>
+     </servlet>
+     <servlet-mapping>
+         <servlet-name>ServletDemo01</servlet-name>
+         <!--url-pattern 就是浏览器访问时候， 需要输入的 地址-->
+         <!--  chrome 里面输入 ： http://localhost:8080/ServletDemo01-->
+         <url-pattern>/ServletDemo01</url-pattern>
+     </servlet-mapping>
+</web-app>
