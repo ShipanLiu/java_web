@@ -3,6 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--配置 ServletContext的 Config, 直接写在<web-app> 的跟标签的里面-->
+    <context-param>
+        <param-name>globalEncoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>globalDesc</param-name>
+        <param-value>this is the ServletContext</param-value>
+    </context-param>
 
     <!--Servlet 快速配置-->
      <servlet>
@@ -15,4 +24,41 @@
          <!--  chrome 里面输入 ： http://localhost:8080/ServletDemo01-->
          <url-pattern>/ServletDemo01</url-pattern>
      </servlet-mapping>
+
+    <!--test1_servlet  -》 test2_servlet_http 配置-->
+    <servlet>
+        <servlet-name>ServletDemo02</servlet-name>
+        <servlet-class>test1_serverlet.test2_servlet_http.Test1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDemo02</servlet-name>
+        <!--url-pattern 就是浏览器访问时候， 需要输入的 地址-->
+        <!--  chrome 里面输入 ： http://localhost:8080/ServletDemo01-->
+        <url-pattern>/ServletDemo02</url-pattern>
+    </servlet-mapping>
+
+
+    <!--Vip购物打折多映射-->
+    <servlet>
+        <servlet-name>Test1</servlet-name>
+        <servlet-class>test1_serverlet.test3_map_ways.Test1</servlet-class>
+
+        <!--服务器启动时候， 就初始化。（而不是再第一次访问时候才init）-->
+        <load-on-startup>1</load-on-startup>
+
+        <!--ServletConfig-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>desc</param-name>
+            <param-value>This is from ServletConfig</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test1</servlet-name>
+        <!-- *表示什么都可以写，之后截下来及进行判断 -->
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 </web-app>
