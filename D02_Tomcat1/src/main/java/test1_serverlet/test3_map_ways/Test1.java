@@ -1,6 +1,7 @@
 package test1_serverlet.test3_map_ways;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -81,9 +82,52 @@ public class Test1 extends HttpServlet {
 
 
         //得到ServletContext对象
-        System.out.println(config.getServletContext());
+//        System.out.println(config.getServletContext());
 
         // org.apache.catalina.core.ApplicationContextFacade@56b7d805
+
+
+        // ServletContext
+        ServletContext servletContext = config.getServletContext();
+
+
+        // get value via key
+        System.out.println("&&&&&&&&&&&&&&&&");
+        System.out.println(servletContext.getInitParameter("globalDesc"));
+        System.out.println("&&&&&&&&&&&&&&&&");
+
+        // context path
+        System.out.println(servletContext.getContextPath()); // /tomcat1    就是在配置里面 delivery下面的application context
+        System.out.println("&&&&&&&&&&&&&&&&");
+
+
+        // real path
+        System.out.println("&&&&&&&&&&&&&&&&");
+        System.out.println(servletContext.getRealPath("/"));  // "/"代表 means the root path: also webapp folder
+        // 用途： 获取文件的绝对路径
+        // 输出： H:\JAVA\project\Basic\Tomcat1\target\Tomcat1-1.0-SNAPSHOT\
+
+        // 举例： 获取 webapp 下面的b.txt
+        String pathB = servletContext.getRealPath("/bbb.txt");
+        System.out.println(pathB); // H:\JAVA\project\Basic\Tomcat1\target\Tomcat1-1.0-SNAPSHOT\bbb.txt
+
+        // 获取 WEB-INF下面的
+        System.out.println(servletContext.getRealPath("/WEB-INF/ccc.txt")); // H:\JAVA\project\Basic\Tomcat1\target\Tomcat1-1.0-SNAPSHOT\WEB-INF\ccc.txt
+
+        // 获取 src 下面的aaa.txt
+        //无法获取， 所以文件 因该定义在 webapp下面。
+
+        /*
+        * servletContext 的另外一个用处： 共享数据
+        *
+        * */
+
+        servletContext.setAttribute("username", "jiba");
+
+        Object username = servletContext.getAttribute("username");
+        System.out.println(username);
+
+        servletContext.removeAttribute("username");
 
 
     }

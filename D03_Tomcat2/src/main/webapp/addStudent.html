@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保存学生信息</title>
+</head>
+<body>
+<!--解释一下， localhost:8080/stu  是 tomcat的路径，-->
+<!--studentServlet 是 在 servlet配置文件中 配置的 mapping name、-->
+    <form action="/stu/studentServlet" method="get" autocomplete="off">
+         student name: <input type="text" name="name"> <br/>
+         student age: <input type="number" name="age"> <br/>
+         student grade: <input type="number" name="grade"> <br/>
+        <!--if clck save, the data will be delivered to localhost:8080/stu/studnetServlet  -->
+        <button type="submit">save</button>
+    </form>
+</body>
+</html>
