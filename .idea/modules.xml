@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/01Module/D01_Basic.iml" filepath="$PROJECT_DIR$/01Module/D01_Basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tomcat1/D02_Tomcat1.iml" filepath="$PROJECT_DIR$/Tomcat1/D02_Tomcat1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tomcat2/D03_Tomcat2.iml" filepath="$PROJECT_DIR$/Tomcat2/D03_Tomcat2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D03_Tomcat2/D03_Tomcat21.iml" filepath="$PROJECT_DIR$/D03_Tomcat2/D03_Tomcat21.iml" />
       <module fileurl="file://$PROJECT_DIR$/D04_req_resp/D04_req_resp.iml" filepath="$PROJECT_DIR$/D04_req_resp/D04_req_resp.iml" />
     </modules>
   </component>
