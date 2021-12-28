@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="D03_Tomcat2" />
         <module name="D04_req_resp" />
+        <module name="D05" />
         <module name="D02_Tomcat1" />
+        <module name="D03_Tomcat2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="D02_Tomcat1" target="1.8" />
       <module name="D03_Tomcat2" target="1.8" />
       <module name="D04_req_resp" target="1.8" />
+      <module name="D05" target="1.8" />
       <module name="StudentMangage" target="1.8" />
       <module name="Tomcat" target="1.8" />
       <module name="Tomcat_demo" target="1.8" />

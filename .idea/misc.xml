@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/D02_Tomcat1" />
     <file type="web" url="file://$PROJECT_DIR$/D03_Tomcat2" />
     <file type="web" url="file://$PROJECT_DIR$/D04_req_resp" />
+    <file type="web" url="file://$PROJECT_DIR$/D05" />
     <file type="web" url="file://$PROJECT_DIR$/StudentMangage" />
     <file type="web" url="file://$PROJECT_DIR$/Tomcat_demo" />
   </component>
@@ -13,6 +14,7 @@
         <option value="$PROJECT_DIR$/Tomcat1/pom.xml" />
         <option value="$PROJECT_DIR$/Tomcat2/pom.xml" />
         <option value="$PROJECT_DIR$/D04_req_resp/pom.xml" />
+        <option value="$PROJECT_DIR$/D05/pom.xml" />
       </list>
     </option>
   </component>
