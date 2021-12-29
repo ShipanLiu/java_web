@@ -3,4 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--配置全局参数， 为了 EL.03.jsp-->
+    <context-param>
+        <param-name>pname</param-name>
+        <param-value>nnnnnnn</param-value>
+    </context-param>
 </web-app>
