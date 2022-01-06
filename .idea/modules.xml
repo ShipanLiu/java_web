@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/D03_Tomcat2/D03_Tomcat21.iml" filepath="$PROJECT_DIR$/D03_Tomcat2/D03_Tomcat21.iml" />
       <module fileurl="file://$PROJECT_DIR$/D04_req_resp/D04_req_resp.iml" filepath="$PROJECT_DIR$/D04_req_resp/D04_req_resp.iml" />
       <module fileurl="file://$PROJECT_DIR$/D05/D05.iml" filepath="$PROJECT_DIR$/D05/D05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D06_JDBC/D06_JDBC.iml" filepath="$PROJECT_DIR$/D06_JDBC/D06_JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D06_Mybatis/D06_Mybatis.iml" filepath="$PROJECT_DIR$/D06_Mybatis/D06_Mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D07_Mybatis07.iml" filepath="$PROJECT_DIR$/D07_Mybatis07.iml" />
     </modules>
   </component>
 </project>

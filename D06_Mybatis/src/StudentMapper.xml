@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis的DTD约束， 相关的提示， 标签的报错-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    mapper：核心根标签
+    namespace属性：名称空间
+-->
+<mapper namespace="StudentMapper">
+    <!--
+        select：查询功能的标签
+        id属性：唯一标识
+        resultType属性：指定结果映射对象类型
+        parameterType属性：指定参数映射对象类型
+        增删改查
+    -->
+    <select id="selectAll" resultType="student">
+        SELECT * FROM student
+    </select>
+
+    <!-- <select id="selectById" resultType="student" parameterType="java.lang.Integer">-->
+    <!--int 就是 java.lang.Integer 的别名-->
+    <select id="selectById" resultType="student" parameterType="int">
+        SELECT * FROM student WHERE id = #{id}
+    </select>
+    <!--对于 增删改 返回的都是 行数 int 类型：   因此不用写上 resultType-->
+    <!--参数类型 是 从 Student 中的-->
+    <insert id="insert" parameterType="student">
+        INSERT INTO student VALUES (#{id},#{name},#{age})
+    </insert>
+    <!--修改-->
+    <update id="update" parameterType="student">
+        UPDATE student SET name = #{name},age = #{age} WHERE id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM student WHERE id = #{id}
+    </delete>
+</mapper>

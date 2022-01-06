@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/target/Tomcat2-1.0-SNAPSHOT" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
