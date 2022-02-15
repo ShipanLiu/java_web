@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/D06_JDBC/D06_JDBC.iml" filepath="$PROJECT_DIR$/D06_JDBC/D06_JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/D06_Mybatis/D06_Mybatis.iml" filepath="$PROJECT_DIR$/D06_Mybatis/D06_Mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/D07_Mybatis07.iml" filepath="$PROJECT_DIR$/D07_Mybatis07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day27_jdbc01/day27_jdbc01.iml" filepath="$PROJECT_DIR$/day27_jdbc01/day27_jdbc01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day28_jdbc02/day28_jdbc02.iml" filepath="$PROJECT_DIR$/day28_jdbc02/day28_jdbc02.iml" />
     </modules>
   </component>
 </project>
