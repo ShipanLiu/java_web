@@ -21,16 +21,18 @@ public class Test01 {
         // get connection
         Connection connection  = JDBCUtils.sqlConnection();
         // create sql and the value array
-        String sql = "SELECT * FROM account";
+        String sql = "SELECT id, sname name, balance FROM account";
         // get preparedStatement
         PreparedStatement pst = connection.prepareStatement(sql);
         // get the matadata  , mata data is the  title from the sql disgram
         // for example : in account the metadata is "id", "sname", "balance"
+        // 获取 count（重要）
         ResultSetMetaData metaData = pst.getMetaData();
         int metaDataCount = metaData.getColumnCount();
         System.out.println("the column count from metadata is: " + metaDataCount);
         for(int i = 0; i < metaDataCount; i ++) {
             System.out.println(metaData.getColumnName(i+1)); // id   sname  balance    sql表 初始定义的 名字
+            // 获取别名 （重要）
             System.out.println(metaData.getColumnLabel(i+1)); // id   sname  balance   sql 执行时候，换名， 或者自定义的名字、
                                                               // like: select id, sname name, balance from account   这时候 getColumnLabel 的鸡国就是 id name balance.
             System.out.println(metaData.getColumnClassName(i + 1));  // java.lang.Integer   java.lang.String  java.lang.Integer
@@ -41,12 +43,7 @@ public class Test01 {
         // get the result
 
         while(resultSet.next()) {
-            int id = resultSet.getInt("id");
-            String sname = resultSet.getString("sname");
-            int balance = resultSet.getInt("balance");
-            Account account = new Account(id, sname, balance);
 
-//            System.out.println(account);
 
         }
 

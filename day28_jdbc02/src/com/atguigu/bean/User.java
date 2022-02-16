@@ -1,18 +1,17 @@
 package com.atguigu.bean;
 
-public class Account {
+public class User {
     private int id;
     private String sname;
-    private int balance;
+    private String pwd;
 
-
-    public Account() {
+    public User() {
     }
 
-    public Account(int id, String sname, int balance) {
+    public User(int id, String sname, String pwd) {
         this.id = id;
-        this.sname = sname;  //一定要和 sql 里面的 表头的名字对应。
-        this.balance = balance;
+        this.sname = sname;
+        this.pwd = pwd;
     }
 
     public int getId() {
@@ -23,8 +22,8 @@ public class Account {
         return sname;
     }
 
-    public int getBalance() {
-        return balance;
+    public String getPwd() {
+        return pwd;
     }
 
     public void setId(int id) {
@@ -35,16 +34,16 @@ public class Account {
         this.sname = sname;
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     @Override
     public String toString() {
-        return "Account{" +
+        return "User{" +
                 "id=" + id +
                 ", sname='" + sname + '\'' +
-                ", balance=" + balance +
+                ", pwd='" + pwd + '\'' +
                 '}';
     }
 }
